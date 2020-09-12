@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="">
+	<link rel="stylesheet" href="main.css">
 	<style>
 	ul {
   	list-style-type: none;
@@ -28,19 +28,56 @@
   	background-color: #111;
 	}
 </style>
+<style>
+   .dark-mode {
+      background-color: #1c1c1c;
+      color: white;
+   }
+   .toggleButton {
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid green;
+    cursor: pointer;
+    border-radius: 100px;
+    position: relative;
+}
+.toggleButton:hover {
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 100px;
+    position: relative;
+    background-color: #7a7a7a;
+    color: white
+}
+</style>
 </head>
 <body>
+	<script src="main.js"></script>
 	<ul>
-  		<li><a class="active" href="#home">Home</a></li>
-  		<li><a href="#news">News</a></li>
-  		<li><a href="#contact">Contact</a></li>
-  		<li><a href="#about">About</a></li>
+  		<li><a class="active" href="#home">Hjem</a></li>
+  		<li><a href="klokkeklang.html">Kornettklang</a></li>
+  		<button class="toggleButton">Bytt til mørk modus/lys</button>
 	</ul>
 
+	
+
 	<a href="klokkeklang.html">
-         <img alt="Klokkeklang" src="https://denlillebasun.no/wp-content/uploads/2020/07/Getzen-481-kornett-lakkert-600x600.jpg"
-         width=150" height="150">
+         <img alt="Klokkeklang" src="https://cdn.jpmusicalinstruments.com/uploads/var/14_93_s.png?v=1516023055"
+         width=150" height="100">
       </a>
     <h1>Klikk på bildet for å komme til kornettklang</h1>
+
+
+
+
 </body>
+<script>
+   document .querySelector(".toggleButton") .addEventListener("click", toggleDarKMode);
+   function toggleDarKMode() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+   }
+</script>
 </html>
